@@ -11,25 +11,25 @@
 <h1>Makan dan bergerak, <span>dibaca bersama.</span></h1>
 <p>Platform AI yang menghubungkan catatan nutrisi dan aktivitas fisik, lewat WhatsApp dan website, untuk masyarakat umum yang berolahraga.</p>
 <a class="btn" href="#demo" onclick="return openM('up')">Daftar Gratis</a> <a class="btn o" href="#fitur">Lihat Fitur</a>
-<div class="st"><div><b>37,4%</b><small>penduduk 10+ th kurang aktif (SKI 2023)</small></div><div><b>48,7%</b><small>beralasan tidak ada waktu</small></div><div><b>150–300</b><small>menit/minggu anjuran WHO</small></div></div>
+<div class="st"><div><b>37,4%</b><small>penduduk 10+ th kurang aktif (SKI 2023)</small></div><div><b>23,4%</b><small>Orang dewasa mengalami obesitas (SKI 2023)</small></div><div><b>96,7%</b><small>Belum memenuhi konsumsi buah dan sayur (SKI 2023)</small></div></div>
 </div></div>
 
 <section id="fitur"><div class="w"><h2>Fitur Utama</h2><p class="sub">Dua sisi kesehatan, satu sistem yang saling terhubung.</p>
 <div class="gr">
 <div class="cd"><i>🍛</i><h3>Catat Makanan via WhatsApp</h3><p>Kirim foto, isi berat dan cara olah. AI memberi estimasi dengan rentang dan bisa dikoreksi.</p></div>
-<div class="cd"><i>🏃</i><h3>Pantau Aktivitas</h3><p>Jalan, lari, gym, bersepeda. Input manual, GPS, atau smartwatch (opsional).</p></div>
+<div class="cd"><i>🏃</i><h3>Pantau Aktivitas</h3><p>Jalan, lari, gym, bersepeda. Input manual, dan GPS.</p></div>
 <div class="cd"><i>🔗</i><h3>Insight Terpadu</h3><p>Evaluasi protein, energi, dan cairan setelah latihan dari gabungan kedua data.</p></div>
 <div class="cd"><i>🥗</i><h3>Ahli Gizi & Katering</h3><p>Konsultasi ahli gizi olahraga dan katalog katering sehat mitra. (Rencana)</p></div></div></div></section>
 
 <section id="cara" class="alt"><div class="w"><h2>Cara Kerja</h2><p class="sub">Tiga langkah sederhana.</p>
 <div class="gr"><div class="cd"><i>1️⃣</i><h3>Catat</h3><p>Makanan dan aktivitas harian lewat chat atau web.</p></div>
-<div class="cd"><i>2️⃣</i><h3>Hubungkan</h3><p>Sistem memadukan asupan, aktivitas, tidur, dan tujuan pribadi.</p></div>
+<div class="cd"><i>2️⃣</i><h3>Hubungkan</h3><p>Sistem memadukan asupan, aktivitas, dan tujuan pribadi.</p></div>
 <div class="cd"><i>3️⃣</i><h3>Tindak lanjuti</h3><p>Saran edukatif yang praktis, tanpa diagnosis medis.</p></div></div></div></section>
 
 <section id="demo"><div class="w"><h2>Aplikasi</h2><p class="sub" id="as"></p>
 <div id="lock" class="cd" style="text-align:center;padding:40px"><h3>🔒 Masuk untuk memakai fitur</h3><p class="nt" style="margin-bottom:14px">Catat makanan, aktivitas, dan lihat insight terpadu setelah masuk.</p><button class="btn" style="width:auto;padding:11px 22px" onclick="openM('in')">Masuk</button> <button class="btn o" style="width:auto;padding:11px 22px" onclick="openM('up')">Daftar</button></div>
 <div id="app" hidden><aside class="tb" id="tb"></aside><div class="pn">
-<div class="tp" id="t0"><div class="cd"><h3>Profil & tujuan</h3><div class="r2"><div><label>Berat (kg)</label><input id="bb" type="number" value="60"></div><div><label>Tujuan</label><select id="gl"><option value="1.2">Jaga kebugaran</option><option value="1.4">Turun BB sehat</option><option value="1.6">Bangun otot</option></select></div></div><p class="nt">Target protein = berat × 1,2 / 1,4 / 1,6 g (aturan demo, perlu validasi ahli gizi).</p></div>
+<div class="tp" id="t0"><div class="cd"><h3>Profil & tujuan</h3><div class="r2"><div><label>Berat badan (kg)</label><input id="bb" type="number" value="60"></div><div><label>Tinggi badan (cm)</label><input id="th" type="number" value="165"></div></div><div class="r2"><div><label>Usia (tahun)</label><input id="ag" type="number" value="21"></div><div><label>Jenis kelamin</label><select id="sx"><option value="5">Laki-laki</option><option value="-161">Perempuan</option></select></div></div><div><label>Aktivitas harian</label><select id="lv"><option value="1.375">Ringan</option><option value="1.55" selected>Sedang</option><option value="1.725">Tinggi</option></select></div><div><label>Tujuan</label><select id="gl"><option value="1.2">Jaga kebugaran</option><option value="1.4">Turun BB sehat</option><option value="1.6">Bangun otot</option></select></div><p class="nt">Jatah harian: energi dari rumus Mifflin-St Jeor × faktor aktivitas (turun BB ×0,85; bangun otot ×1,1), protein = berat × 1,2 / 1,4 / 1,6 g, lemak 25% energi, sisanya karbohidrat. Aturan demo, perlu validasi ahli gizi.</p></div>
 <div class="cd" style="margin-top:14px"><h3>Hari ini</h3><div class="kp" id="kp"></div></div>
 <div class="cd" style="margin-top:14px"><h3>Insight terpadu</h3><div id="ins"></div><p class="nt">Edukasi umum, bukan diagnosis medis. Label: Fakta ilmiah (perlu sitasi di esai), Estimasi AI, Rencana.</p></div></div>
 <div class="tp" id="t1"><div class="g2"><div class="cd"><h3>AI WhatsApp (simulasi)</h3><div class="ch" id="ch"><div class="m a">Halo! Kirim foto makananmu, lalu isi jenis, berat, dan cara olah.</div></div>
@@ -39,23 +39,24 @@
 <p class="nt"><b>Mengapa foto tidak menentukan berat?</b> Foto tidak memuat ukuran dan komposisi porsi, jadi berat dan cara olah diisi pengguna. Hasil berupa estimasi (±20%) yang bisa dikoreksi.</p></div>
 <div class="cd"><h3>Riwayat makanan</h3><ul id="ml"></ul></div></div></div>
 <div class="tp" id="t2"><div class="g2"><div class="cd"><h3>Catat aktivitas</h3><div class="r2"><div><label>Jenis</label><select id="at"><option>Jalan kaki</option><option>Lari</option><option>Gym (beban)</option><option>Bersepeda</option><option>Lainnya</option></select></div><div><label>Durasi (mnt)</label><input id="du" type="number" value="45"></div></div>
-<div class="r2"><div><label>Jarak km (opsional)</label><input id="ds" type="number" step="0.1"></div><div><label>RPE 1–10: <span id="rv">5</span></label><input id="rp" type="range" min="1" max="10" value="5"></div></div>
-<button class="btn f" id="aa">Simpan aktivitas</button><button class="btn o f" id="wa">Impor smartwatch (opsional, simulasi)</button><p class="nt" id="wn">Tanpa smartwatch tetap berfungsi. GPS untuk aktivitas luar ruangan perlu izin di tab Privasi.</p></div>
-<div class="cd"><h3>Kelelahan, tidur & cairan</h3><div class="r2"><div><label>Kelelahan (1–5)</label><input id="fa" type="number" min="1" max="5" value="3"></div><div><label>Tidur (jam)</label><input id="sl" type="number" step="0.5" value="7"></div></div>
-<label>Cairan tercatat: <span id="wv">0</span> ml</label><button class="btn o" data-w="250">+250 ml</button> <button class="btn o" data-w="500">+500 ml</button>
-<h3 style="margin-top:14px">Riwayat</h3><ul id="al"></ul></div></div></div>
+<div class="r2"><div><label>Jarak km (opsional)</label><input id="ds" type="number" step="0.1"></div><div><label>Tingkat usaha saat beraktifitas 1–10: <span id="rv">5</span></label><input id="rp" type="range" min="1" max="10" value="5"></div></div>
+<button class="btn f" id="aa">Simpan aktivitas</button><button class="btn o f" id="wa">Izinkan lokasi</button><p class="nt" id="wn">GPS untuk aktivitas luar ruangan perlu izin di tab Privasi.</p></div>
+<div class="cd"><h3>Kebutuhan cairan harian</h3><label>Cairan yang diminum: <span id="wv">0</span> ml</label><div><button class="btn o" data-w="250">+250 ml</button> <button class="btn o" data-w="500">+500 ml</button></div>
+<label>Input manual (ml)</label><div class="r2" style="grid-template-columns:2fr 1fr"><input id="wm" type="number" min="1" step="10" placeholder="Contoh: 350"><button class="btn" id="wadd" style="margin:0">Tambah</button></div><p class="nt" id="wmn"></p>
+<h3 style="margin-top:14px">Riwayat cairan</h3><ul id="wl"></ul></div>
+<div class="cd"><h3>Riwayat aktivitas</h3><ul id="al"></ul></div></div></div>
 <div class="tp" id="t3"><div class="g2"><div class="cd"><h3>Katering sehat</h3><p class="nt" id="kn"></p><div id="kt"></div></div>
 <div class="cd"><h3>Konsultasi ahli gizi olahraga</h3><label>Pertanyaanmu</label><textarea id="q" rows="4" placeholder="Contoh: bagaimana makan setelah latihan beban sore?"></textarea><button class="btn f" id="qs">Kirim ringkasan & pertanyaan (simulasi)</button><p class="nt" id="qn"></p></div></div></div>
 <div class="tp" id="t4"><div class="g2"><div class="cd"><h3>Target personal</h3><div class="r2"><div><label>Sesi/minggu</label><input id="ts" type="number" value="3"></div><div><label>Menit/minggu</label><input id="tm" type="number" value="150"></div></div><div id="tg" class="kp" style="margin-top:12px"></div><p class="nt">WHO: 150–300 mnt/minggu aktivitas sedang untuk dewasa 18–64 th.</p>
 <h3>Notifikasi cerdas (WhatsApp)</h3><label class="ck"><input type="checkbox" id="nf"> Pengingat dan notifikasi target tercapai</label><label>Jam pengingat</label><input id="nt" type="time" value="19:00"><div id="tn"></div></div>
-<div class="cd"><h3>Progres & konsistensi</h3><div class="bs" id="bs"></div><p class="nt">Tiga minggu lalu: data contoh. Minggu ini: dari catatanmu.</p></div></div></div>
+<div class="cd"><h3>Progres & konsistensi</h3><div class="bs" id="bs"></div><p class="nt">Data tiga minggu sebelumnya merupakan simulasi, sedangkan data minggu ini berasal dari aktivitas yang kamu catat.</p></div></div></div>
 <div class="tp" id="t5"><div class="g2"><div class="cd"><h3>Kontrol data</h3><label class="ck"><input type="checkbox" id="c1"> Bagikan ringkasan ke ahli gizi</label><label class="ck"><input type="checkbox" id="c2"> Izinkan lokasi GPS (aktivitas luar ruangan)</label><label class="ck"><input type="checkbox" id="c3"> Izinkan impor smartwatch</label><label class="ck"><input type="checkbox" id="c4"> Simpan foto makanan</label>
 <button class="btn o" id="dl">Unduh data (JSON)</button> <button class="btn o" id="rm">Hapus semua data</button></div>
 <div class="cd"><h3>Prinsip perlindungan data</h3><ul><li>Minimisasi: hanya data yang diperlukan.</li><li>Persetujuan eksplisit untuk data kesehatan (UU PDP No. 27/2022; cek pasal rujukan).</li><li>Enkripsi dan akses terbatas (rencana backend).</li></ul><h3 style="margin-top:12px">Yang tidak dilakukan</h3><ul><li>Tidak mendiagnosis penyakit.</li><li>Tidak menjamin peningkatan performa.</li><li>Tidak mengukur keringat tanpa sensor.</li><li>Tidak menyimpulkan kebutuhan energi terpenuhi hanya dari kalori terbakar.</li></ul></div></div></div></div></div></div></section>
 
-<section id="etika" class="alt"><div class="w"><h2>Batasan & Etika</h2><p class="sub">Yang tidak dilakukan NUTRIMOVE.</p>
+<section id="etika" class="alt"><div class="w"><h2>Batasan & Etika (yang tidak dilakukan NUTRIMOVE)</h2>
 <div class="gr"><div class="cd"><h3>Bukan diagnosis</h3><p>Data aktivitas tidak dipakai untuk menyimpulkan penyakit.</p></div>
-<div class="cd"><h3>Estimasi, bukan kepastian</h3><p>Foto saja tidak menentukan gizi secara pasti.</p></div>
+<div class="cd"><h3>Estimasi, bukan kepastian</h3><p>Foto saja tidak menentukan gizi secara pasti, dan membutuhkan konfirmasi secara detail dari pengguna.</p></div>
 <div class="cd"><h3>Privasi data</h3><p>Persetujuan eksplisit dan minimisasi data kesehatan (UU PDP).</p></div></div></div></section>
 </main>
 
@@ -64,7 +65,7 @@
 
 <div id="ov" class="ov"></div><div id="md" class="mo" hidden><div class="cd mb"><button class="x" onclick="$('md').hidden=true">×</button><h3 id="mdt">Masuk</h3><div id="nmw" hidden><label>Nama</label><input id="nm"></div><label>Email</label><input id="em" type="email"><label>Password</label><input id="pw" type="password"><div id="er" class="er"></div><button class="btn" id="ms" style="width:100%">Masuk</button><p class="nt" id="sw"></p><p class="nt">Simulasi tanpa server: password tidak disimpan. Versi nyata memakai backend dengan hash password.</p></div></div>
 <script>
-var F={"Nasi putih":{rebus:[130,2.7,28]},"Dada ayam":{rebus:[165,31,0],panggang:[190,29,0],goreng:[245,27,8]},"Telur":{rebus:[155,13,1],goreng:[196,14,1]},"Tempe":{panggang:[200,19,9],goreng:[300,20,10]},"Pisang":{mentah:[89,1.1,23]}},$=function(i){return document.getElementById(i)},D={m:[],a:[],w:0},
+var F={"Nasi putih":{rebus:[130,2.7,28,.3]},"Dada ayam":{rebus:[165,31,0,3.6],panggang:[190,29,0,7],goreng:[245,27,8,12]},"Telur":{rebus:[155,13,1,11],goreng:[196,14,1,15]},"Tempe":{panggang:[200,19,9,11],goreng:[300,20,10,22]},"Pisang":{mentah:[89,1.1,23,.3]}},$=function(i){return document.getElementById(i)},D={m:[],a:[],w:0,wl:[]},
 TB=[["t0","🏠 Ringkasan"],["t1","💬 WhatsApp AI"],["t2","🏃 Aktivitas"],["t3","🥗 Gizi & Katering"],["t4","🎯 Target"],["t5","🔒 Privasi"]],
 CT=[["Nasi ikan nila kukus, tumis bayam",480,33],["Bowl ayam panggang, ubi, sayur",520,38],["Plate tempe-tahu, nasi merah",470,26],["Salad telur dan kentang",380,22]];
 TB.forEach(function(t){var b=document.createElement("button");b.textContent=t[1];b.dataset.t=t[0];b.onclick=function(){tab(t[0])};$("tb").appendChild(b)});
@@ -72,42 +73,49 @@ function tab(id){$("tb").classList.remove("open");$("ov").className="ov";TB.forE
 Object.keys(F).forEach(function(k){$("fd").add(new Option(k,k))});
 function mm(){$("mt").innerHTML="";Object.keys(F[$("fd").value]).forEach(function(m){$("mt").add(new Option(m,m))})}
 $("fd").onchange=mm;mm();
+function TG(){var w=+$("bb").value||60,h=+$("th").value||165,a=+$("ag").value||21,k=(10*w+6.25*h-5*a+ +$("sx").value)*(+$("lv").value)*({"1.2":1,"1.4":.85,"1.6":1.1}[$("gl").value]),p=w*(+$("gl").value),l=k*.25/9;return{k:k,p:p,l:l,c:(k-p*4-l*9)/4}}
+function RM(){var T=TG(),s={k:0,p:0,c:0,l:0};D.m.forEach(function(x){s.k+=x.k;s.p+=x.p;s.c+=x.c;s.l+=x.l});
+function f(n,t,u){var d=t-n;return d>=0?Math.round(d)+u:"0"+u+" (lebih "+Math.round(-d)+u+")"}
+return"Sisa kebutuhan hari ini: energi "+f(s.k,T.k," kcal")+", protein "+f(s.p,T.p," g")+", karbo "+f(s.c,T.c," g")+", lemak "+f(s.l,T.l," g")+". (Estimasi demo.)"}
 function say(h,c){var d=document.createElement("div");d.className="m "+c;d.innerHTML=h;$("ch").appendChild(d);$("ch").scrollTop=1e5;return d}
-$("sd").onclick=function(){var f=$("fd").value,m=$("mt").value,g=+$("gr").value;if(!(g>0))return;var p=F[f][m],e={f:f,m:m,g:g,k:p[0]*g/100,p:p[1]*g/100,c:p[2]*g/100};
+$("sd").onclick=function(){var f=$("fd").value,m=$("mt").value,g=+$("gr").value;if(!(g>0))return;var p=F[f][m],e={f:f,m:m,g:g,k:p[0]*g/100,p:p[1]*g/100,c:p[2]*g/100,l:p[3]*g/100};
 say(($("ph").files.length?"📷 ":"")+f+", "+g+" g, "+m,"u");
-var d=say("Dikenali: <b>"+f+"</b> ("+m+"). Estimasi ±20%: ~"+Math.round(e.k*.8)+"–"+Math.round(e.k*1.2)+" kcal, protein ~"+e.p.toFixed(1)+" g, karbo ~"+e.c.toFixed(1)+" g. Sesuai?<br>","a"),y=document.createElement("button"),n=document.createElement("button");
+var d=say("Dikenali: <b>"+f+"</b> ("+m+"). Estimasi ±20%: ~"+Math.round(e.k*.8)+"–"+Math.round(e.k*1.2)+" kcal, protein ~"+e.p.toFixed(1)+" g, karbo ~"+e.c.toFixed(1)+" g, lemak ~"+e.l.toFixed(1)+" g. <br>","a"),y=document.createElement("button"),n=document.createElement("button");
 y.className=n.className="btn o";y.textContent="Simpan";n.textContent="Koreksi";
-y.onclick=function(){D.m.push(e);say("Tersimpan ✅","a");y.remove();n.remove();rd()};
+y.onclick=function(){D.m.push(e);say("Tersimpan ✅ "+RM(),"a");y.remove();n.remove();rd()};
 n.onclick=function(){say("Ubah jenis/berat/cara olah lalu kirim ulang.","a");y.remove();n.remove()};d.appendChild(y);d.appendChild(n)};
 $("rp").oninput=function(){$("rv").textContent=this.value};
 $("aa").onclick=function(){D.a.push({t:$("at").value,d:+$("du").value||0,r:+$("rp").value,km:+$("ds").value||0});rd()};
 $("wa").onclick=function(){if(!$("c3").checked){$("wn").textContent="Aktifkan 'Izinkan impor smartwatch' di tab Privasi.";return}D.a.push({t:"Lari (smartwatch, simulasi)",d:30,r:6,km:4.2});rd()};
-[].forEach.call(document.querySelectorAll("[data-w]"),function(b){b.onclick=function(){D.w+=+b.dataset.w;rd()}});
+[].forEach.call(document.querySelectorAll("[data-w]"),function(b){b.onclick=function(){aw(+b.dataset.w)}});
 $("qs").onclick=function(){$("qn").textContent=$("c1").checked?"Terkirim ke ahli gizi (simulasi).":"Aktifkan 'Bagikan ringkasan ke ahli gizi' di tab Privasi dulu."};
 $("dl").onclick=function(){var a=document.createElement("a");a.href="data:application/json,"+encodeURIComponent(JSON.stringify(D,null,1));a.download="nutrimove-data.json";a.click()};
-$("rm").onclick=function(){D={m:[],a:[],w:0};rd()};
-["bb","gl","fa","sl","ts","tm","nf"].forEach(function(i){$(i).oninput=$(i).onchange=rd});
-function rd(){var b=+$("bb").value||60,tp=b*(+$("gl").value),P=0,K=0,C=0,mn=0,hv=0,fa=+$("fa").value,sl=+$("sl").value;
+$("rm").onclick=function(){D={m:[],a:[],w:0,wl:[]};rd()};
+["bb","th","ag","sx","lv","gl","ts","tm","nf"].forEach(function(i){$(i).oninput=$(i).onchange=rd});
+function aw(v){if(!(v>0))return;D.w+=v;(D.wl=D.wl||[]).push({v:v,t:new Date().toLocaleTimeString("id-ID",{hour:"2-digit",minute:"2-digit"})});rd()}
+function dw(i){D.w-=D.wl[i].v;D.wl.splice(i,1);rd();return false}
+$("wadd").onclick=function(){var v=+$("wm").value;if(!(v>0)){$("wmn").textContent="Isi jumlah cairan dalam ml.";return}$("wmn").textContent="";aw(v);$("wm").value=""};
+function rd(){var b=+$("bb").value||60,T=TG(),tp=T.p,P=0,K=0,C=0,mn=0,hv=0;
 D.m.forEach(function(x){K+=x.k;P+=x.p;C+=x.c});D.a.forEach(function(a){mn+=a.d;if(a.r>=7||a.d>=60)hv=1});
 var pc=Math.round(P/tp*100),rem=Math.max(0,tp-P),ts=+$("ts").value||1,tm=+$("tm").value||1,wk=D.a.length;
 function B(l,v,x){return'<div><div class="k">'+l+'</div><b>'+v+'</b>'+(x!=null?'<div class="bar"><i style="width:'+Math.min(100,x)+'%"></i></div>':'')+'</div>'}
-$("kp").innerHTML=B("Energi tercatat",Math.round(K)+" kcal")+B("Protein",Math.round(P)+"/"+Math.round(tp)+" g",pc)+B("Aktivitas",mn+" mnt",mn/21*100)+B("Cairan",D.w+" ml");
+$("kp").innerHTML=B("Energi",Math.round(K)+"/"+Math.round(T.k)+" kcal",K/T.k*100)+B("Protein",Math.round(P)+"/"+Math.round(tp)+" g",pc)+B("Aktivitas",mn+" mnt",mn/21*100)+B("Cairan",D.w+" ml");
 var I=[],G=function(t,x){I.push('<div class="in"><span class="bg">'+t+'</span> '+x+'</div>')};
 if(!D.m.length&&!D.a.length)G("Info","Catat makanan dan aktivitas untuk melihat insight.");
 if(D.a.length&&pc<50)G("Estimasi AI","Setelah beraktivitas, protein baru "+pc+"% target (sisa ~"+Math.round(rem)+" g). Pertimbangkan sumber protein pada makan berikutnya.");
 if(D.a.length&&D.m.length&&pc>=50)G("Estimasi AI","Protein sudah cukup mendukung pemulihan. Pastikan karbohidrat dan cairan juga cukup.");
 if(hv&&D.m.length&&C<b*3)G("Estimasi AI","Latihan berat/lama: karbohidrat tercatat ~"+Math.round(C)+" g masih rendah (ambang demo; angka anjuran perlu dirujuk ke ACSM/ISSN).");
 if(hv&&D.w<1500)G("Fakta ilmiah","Latihan berat/lama dengan cairan tercatat rendah. Tambah cairan sesuai rasa haus.");
-if(D.a.length&&(fa>=4||sl<6))G("Estimasi AI","Kelelahan tinggi atau tidur kurang. Pertimbangkan latihan ringan atau istirahat; konsultasi tenaga kesehatan bila menetap.");
 G("Rencana","Kalori terbakar tidak otomatis menjadi jatah makan tambahan.");$("ins").innerHTML=I.join("");
 $("ml").innerHTML=D.m.map(function(x){return"<li>"+x.f+" "+x.g+" g ("+x.m+"): "+Math.round(x.k)+" kcal, P "+x.p.toFixed(1)+" g</li>"}).join("")||'<li class="k">Belum ada.</li>';
-$("al").innerHTML=D.a.map(function(a){return"<li>"+a.t+" "+a.d+" mnt, RPE "+a.r+(a.km?", "+a.km+" km":"")+"</li>"}).join("")||'<li class="k">Belum ada.</li>';$("wv").textContent=D.w;
+$("al").innerHTML=D.a.map(function(a){return"<li>"+a.t+" "+a.d+" mnt, usaha "+a.r+(a.km?", "+a.km+" km":"")+"</li>"}).join("")||'<li class="k">Belum ada.</li>';$("wv").textContent=D.w;
+$("wl").innerHTML=(D.wl||[]).map(function(x,i){return"<li>"+x.t+": +"+x.v+" ml <a href=\"#\" onclick=\"return dw("+i+")\"><u>hapus</u></a></li>"}).join("")||'<li class="k">Belum ada.</li>';
 var bs=0;CT.forEach(function(c,i){if(Math.abs(c[2]-rem)<Math.abs(CT[bs][2]-rem))bs=i});
 $("kt").innerHTML=CT.map(function(c,i){return'<div class="in"><b>'+c[0]+'</b>'+(i==bs?' <span class="bg">Cocok dengan sisa protein</span>':'')+'<br><small>'+c[1]+' kcal · protein '+c[2]+' g (contoh)</small><br><button class="btn o" onclick="this.textContent=\'Pesanan simulasi dibuat ✅\'">Pesan (simulasi)</button></div>'}).join("");
-$("kn").textContent="Sisa protein hari ini ~"+Math.round(rem)+" g. Menu contoh; versi nyata bermitra dengan penyedia katering yang ada.";
+$("kn").textContent="Pilih menu sesuai kebutuhan gizimu. Pilihan menu dari mitra katering sehat direncanakan diperbarui setiap minggu.";
 $("tg").innerHTML=B("Sesi",wk+"/"+ts,wk/ts*100)+B("Menit",mn+"/"+tm,mn/tm*100);
 $("tn").innerHTML=(wk>=ts||mn>=tm)?'<div class="in"><span class="bg">Notifikasi</span> '+($("nf").checked?"Target tercapai! 🎉 Pesan WhatsApp terkirim (simulasi).":"Target tercapai! 🎉 Aktifkan notifikasi untuk pesan WhatsApp.")+'</div>':"";
-var H=[90,120,115,mn],mx=Math.max.apply(null,H)||1;$("bs").innerHTML=H.map(function(v,i){return'<div><i style="height:'+Math.max(4,v/mx*100)+'px"></i><small>'+(i<3?"M-"+(3-i):"Ini")+'<br>'+v+'</small></div>'}).join("")}
+var H=[90,120,115,mn],mx=Math.max.apply(null,H)||1;$("bs").innerHTML=H.map(function(v,i){return'<div><i style="height:'+Math.max(4,v/mx*100)+'px"></i><small>'+(i<3?"Minggu "+(i+1):"Minggu ini")+'<br>'+v+'<br>menit</small></div>'}).join("")}
 tab("t0");
 var ST={};
 function ld(){try{return JSON.parse(localStorage.getItem("nm_u")||"null")}catch(e){return ST.u||null}}
